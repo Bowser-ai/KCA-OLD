@@ -1,0 +1,18 @@
+			html {
+				background-color:black ;
+			}
+
+			.title-text {
+				text-align: center;
+				color:white;
+			}
+
+			form {
+				text-align:center;
+				margin-top:20px;
+				color:white;
+			}
+
+			.input-filiaalnummer {
+				margin-top:20px;
+			}
