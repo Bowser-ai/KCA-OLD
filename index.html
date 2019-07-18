@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="stylesheets/styles.css">
-		<title> KCA </title>
-		<meta charset = "utf-8">
-	</head>
-		<div class="title-text">
-			<header><h1> KCA @2019 </h1></header>
-		</div>
-	</head>
-	<body>
-		<form>
-			Voer het filiaalnummer in <br><input type = "number" name="filiaalnummer"class="input-filiaalnummer">
-		</form>
-	</body>
+    <head>
+    <meta charset="utf-8">
+	<script src="scripts/query_db.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <title> KCA </title>
+    </head>
+    <body>
+        <header class="doc-title"><h1> KCA@2019</h1></header>
+        <form method="post">
+            <div class="input-element">
+                Voer het filiaalnummer in: <br><input type="number" id="fn" name="filiaalnummer" style="margin : 10px">
+				<div class="button-row">
+					<input class="zoek-button" type="button" onclick="querySQL(document.getElementById('fn').value)" value="Zoek">
+					<input class="opschoon-button" type="button" onclick="clearTextNode()" value="Opschonen">
+				</div>
+            </div>
+        </form>
+    </body>
 </html>
