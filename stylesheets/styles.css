@@ -12,43 +12,55 @@ body {
 
 .main-ui {
 	width: 100%;
-	height : 50%;
+	height : 25%;
 	display: flex;
 	flex-direction: column;
 }
 
 .doc-title {
     text-align: center;
+	width: 100%;
     color: red;
-    font-size:16pt;
+    font-size:2vw;
+	flex: 1;
 }
 
 .input-element {
     display : flex;
     flex-direction : column;
     align-items : center;
-    font-size: 16pt;
+	width: 100%;
+    font-size: 1.5vw;
     color: blue;
+	flex: 1;
+}
+
+form {
+	width: 100%;
 }
 
 .button-row {
 	display : flex;
 	margin-top : 40px;
-	justify-content : space-between;
+	width: 100%;
+	justify-content : center;
+	flex: 1;
 	
 }
 
 .zoek-button,.opschoon-button {
-	font-size: 16px;
+	font-size: 1vw;
 	background : blue;
 	margin: 10px;
 	border-radius: 20px;
 	color:white;
+	width: auto;
 }
 
 .queryText {
-	font-size: 10pt;
+	font-size: 1vw;
 	font-style: underline;
 	font-style: bold;
+	width: 100%;
 	color: white;
 }
