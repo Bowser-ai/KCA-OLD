@@ -16,7 +16,7 @@ function queryDB(filiaalnummer) {
 							"<span>" + "postcode: " + dataList.postcode + "</span><br><br>" +
 							"<span>" + "info :" + dataList.info + "</span><br><br>"
 			
-			document.body.appendChild(div)
+			document.getElementsByClassName("main-ui")[0].appendChild(div)
 		})
 		
 	})
