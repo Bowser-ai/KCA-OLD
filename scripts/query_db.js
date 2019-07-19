@@ -1,7 +1,6 @@
 
 function queryDB(filiaalnummer) {
 	"use strict"
-	console.log(filiaalnummer)
 	var dbRef = firebase.database().ref()
 	dbRef.orderByChild("filiaalnummer").equalTo(Number(filiaalnummer)).once("value", function(snapshot) {
 		if (!snapshot.exists()) { 
@@ -9,7 +8,6 @@ function queryDB(filiaalnummer) {
 			return
 		}
 		snapshot.forEach(function(element) {
-			console.log(element.key + " " + element.val())
 			var dataList = element.val()
 			var div = document.createElement("div")
 			div.classList.add("queryText")

@@ -1,6 +1,8 @@
 
-body{
+body, html{
     background : black;
+	height : 100%;
+	width : 100%;
 }
 
 .doc-title {
@@ -33,7 +35,7 @@ body{
 }
 
 .queryText {
-	font-size: 18px;
+	font-size: 14px;
 	font-style: underline;
 	font-style: bold;
 	color: white;
