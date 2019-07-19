@@ -5,17 +5,29 @@ body, html{
 	width : 100%;
 }
 
+body {
+	display : flex;
+	flex-direction : column;
+}
+
+.main-ui {
+	width: 100%;
+	height : 50%;
+	display: flex;
+	flex-direction: column;
+}
+
 .doc-title {
     text-align: center;
     color: red;
-    font-size:20px;
+    font-size:16pt;
 }
 
 .input-element {
     display : flex;
     flex-direction : column;
     align-items : center;
-    font-size: 22px;
+    font-size: 16pt;
     color: blue;
 }
 
@@ -35,7 +47,7 @@ body, html{
 }
 
 .queryText {
-	font-size: 14px;
+	font-size: 10pt;
 	font-style: underline;
 	font-style: bold;
 	color: white;
