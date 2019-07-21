@@ -88,3 +88,20 @@ form {
 	padding : 15px;
 	margin-bottom : 20px;
 }
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color:darkred;
+}
+
+a:hover {
+	transform: scale(1.1);
+	color : red;
+}
+
+
+
+
