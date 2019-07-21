@@ -22,7 +22,7 @@ body {
     text-align: center;
 	width: 100%;
     color: red;
-    font-size:100%;
+    font-size:150%;
 	flex: 1;
 }
 
@@ -49,6 +49,7 @@ form {
 .button-row {
 	display : flex;
 	margin-top : 40px;
+	margin-bottom : 30px;
 	width: 100%;
 	justify-content : center;
 	flex: 1;
@@ -65,6 +66,7 @@ form {
 	flex : 0 1 auto;
 }
 
+
 .zoek-button:hover,.opschoon-button:hover {
 	color:red;
 	transform: scale(1.2);
@@ -75,6 +77,7 @@ form {
 	font-size: 100%;
 	font-style: underline;
 	font-style: bold;
+	margin-left : 2%;
 	width: 100%;
 	color: white;
 }

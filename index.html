@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title> KCA </title>
     </head>
     <body>
@@ -13,35 +14,23 @@
 			<header class="doc-title"><h1> KCA@2019</h1></header>
 			<form method="post">
 				<div class="input-element">
-					Voer het filiaalnummer in: <br><input type="number" id="fn" name="filiaalnummer" style="margin : 10px">
+					Voer het filiaalnummer in: <br><input type="number" autofocus required id="fn" name="filiaalnummer" style="margin : 10px">
 					<div class="button-row">
-						<input class="zoek-button" type="button" onclick="queryDB(document.getElementById('fn').value)" value="Zoek">
+						<input class="zoek-button" type="button" onclick="queryDB($('#fn').val())" value="Zoek">
 						<input class="opschoon-button" type="button" onclick="clearTextNode()" value="Opschonen">
 					</div>
+						<a class="mededeling-ref" href="mededelingen.html">Medelingen ==></a>
 				</div>
 			</form>
 		</div>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>	
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>	
 	
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#config-web-app -->
 	
-	<script>
-	// Your web app's Firebase configuration
-	var firebaseConfig = {
-		apiKey: "AIzaSyDF2m4vvAS0zQXfn2NQgQxrDZGRblq0wY8",
-		authDomain: "tielbeke3.firebaseapp.com",
-		databaseURL: "https://tielbeke3.firebaseio.com",
-		projectId: "tielbeke3",
-		storageBucket: "tielbeke3.appspot.com",
-		messagingSenderId: "1010883935820",
-		appId: "1:1010883935820:web:3320f49198950cf0"
-	};
-	// Initialize Firebase
-	firebase.initializeApp(firebaseConfig);
-	</script>
-	<script src="scripts/query_db.js"></script>
+		<script src="scripts/initialize_fb.js"></script>
+		<script src="scripts/query_db.js"></script>
     </body>
 </html>
