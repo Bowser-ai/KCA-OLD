@@ -15,12 +15,18 @@
 				<div class="input-element">
 					Voer het filiaalnummer in: <br><input type="number" autofocus required id="fn" name="filiaalnummer" style="margin : 10px">
 					<div class="button-row">
-						<input class="zoek-button" type="button" onclick="new App.DataBase().updateElementFromDb($('.main-ui'),$('#fn').val())" value="Zoek">
+						<input class="zoek-button" type="button" onclick="dataBase.updateElementFromDb($('.main-ui'),$('#fn').val())" value="Zoek">
 						<input class="opschoon-button" type="button" onclick="$('.queryText').remove()" value="Opschonen">
 					</div>
 						<a class="mededeling-ref" href="mededelingen.html">Medelingen ==></a>
 				</div>
 			</form>
+			<div class="dialog-container">
+				<dialog id="dialog">
+				<div>Wijzig mededeling</div>
+				<textarea rows="6" cols="80" id="dialog-input"></textarea>
+				</dialog>
+			</div>
 		</div>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
@@ -31,5 +37,6 @@
 	
 		<script src="scripts/initialize_fb.js"></script>
 		<script src="scripts/query_db.js"></script>
+		<script src="scripts/main.js"></script>
     </body>
 </html>

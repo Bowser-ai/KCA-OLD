@@ -21,7 +21,7 @@
 			this.queryDb(filiaalnummer).then(function (snapshot) {
 			snapshot.forEach(function(element) {
 				var dataList = element.val()
-				var div = $("<div></div>",{class: "queryText", style: "width:90%"} )
+				var div = $("<div></div>",{class: "queryText"} )
 				div.html("<span>" +  "<b>Filiaalnummer:</b> " + dataList.filiaalnummer + "</span><br><br>" +
 						"<a class='maps-link' href='https://www.google.com/maps?q=" + dataList.address + ",netherlands'><span>" + "<b>Adres:</b> " + dataList.address + "</span></a><br><br>" +
 						"<span>" + "<b>Postcode:</b> " + dataList.postcode + "</span><br><br>" +
@@ -29,7 +29,13 @@
 				)
 	
 				$(htmlElement).append(div)	
-				if(dataList.mededeling) $(".info-text").before("<span>" + "<b>Mededeling:</b> " + dataList.mededeling + "</span><br><br>") 
+				if(dataList.mededeling){
+					$(".info-text").last().before("<span>" + "<b>Mededeling:</b> " + dataList.mededeling +/* "</span><a id='dialog-link' href=''>  Wijzig</a>*/"<br><br>") 
+					/*$("#dialog-link").click(function(event) {
+						event.preventDefault()
+						$("#dialog").attr("open","true")
+					}) */
+				}
 				
 			})
 			
