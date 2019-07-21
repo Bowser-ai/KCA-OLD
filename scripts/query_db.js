@@ -21,7 +21,7 @@
 			this.queryDb(filiaalnummer).then(function (snapshot) {
 			snapshot.forEach(function(element) {
 				var dataList = element.val()
-				var div = $("<div></div>",{class: "queryText"} )
+				var div = $("<div></div>",{class: "queryText", style: "width:90%"} )
 				div.html("<span>" +  "<b>Filiaalnummer:</b> " + dataList.filiaalnummer + "</span><br><br>" +
 						"<a class='maps-link' href='https://www.google.com/maps?q=" + dataList.address + ",netherlands'><span>" + "<b>Adres:</b> " + dataList.address + "</span></a><br><br>" +
 						"<span>" + "<b>Postcode:</b> " + dataList.postcode + "</span><br><br>" +
