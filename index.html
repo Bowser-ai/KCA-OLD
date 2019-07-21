@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,8 +15,8 @@
 				<div class="input-element">
 					Voer het filiaalnummer in: <br><input type="number" autofocus required id="fn" name="filiaalnummer" style="margin : 10px">
 					<div class="button-row">
-						<input class="zoek-button" type="button" onclick="queryDB($('#fn').val())" value="Zoek">
-						<input class="opschoon-button" type="button" onclick="clearTextNode()" value="Opschonen">
+						<input class="zoek-button" type="button" onclick="new App.DataBase().queryDb($('#fn').val());" value="Zoek">
+						<input class="opschoon-button" type="button" onclick="App.clearTextNode()" value="Opschonen">
 					</div>
 						<a class="mededeling-ref" href="mededelingen.html">Medelingen ==></a>
 				</div>

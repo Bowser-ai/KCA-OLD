@@ -72,6 +72,10 @@ form {
 	transform: scale(1.2);
 }
 
+.mededeling-ref{
+	margin-bottom: 40px;
+}
+
 
 .queryText {
 	font-size: 100%;
@@ -80,4 +84,7 @@ form {
 	margin-left : 2%;
 	width: 100%;
 	color: white;
+	border: 1px solid blue;
+	padding : 15px;
+	margin-bottom : 20px;
 }
