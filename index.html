@@ -15,7 +15,7 @@
 				<div class="input-element">
 					Voer het filiaalnummer in: <br><input type="number" autofocus required id="fn" name="filiaalnummer" style="margin : 10px">
 					<div class="button-row">
-						<input class="zoek-button" type="button" onclick="dataBase.updateElementFromDb($('.main-ui'),$('#fn').val())" value="Zoek">
+						<input class="zoek-button" type="button" onclick="UI.updateElementFromDb(dataBase,$('.main-ui'),$('#fn').val())" value="Zoek">
 						<input class="opschoon-button" type="button" onclick="$('.queryText').remove()" value="Opschonen">
 					</div>
 						<a class="mededeling-ref" href="mededelingen.html">Medelingen ==></a>
@@ -37,6 +37,7 @@
 	
 		<script src="scripts/initialize_fb.js"></script>
 		<script src="scripts/query_db.js"></script>
+		<script src="scripts/UI.js"></script>
 		<script src="scripts/main.js"></script>
     </body>
 </html>

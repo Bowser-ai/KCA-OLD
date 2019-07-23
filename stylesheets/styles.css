@@ -81,9 +81,8 @@ form {
 	font-size: 100%;
 	font-style: underline;
 	font-style: bold;
-	margin-left : 1%;
-	margin-right : 3%;
-	width: 95%;
+	margin-left : 30px;
+	margin-right : 30px;
 	color: white;
 	border: 1px solid blue;
 	padding : 15px;
