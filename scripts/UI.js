@@ -70,7 +70,12 @@
 								updateUI(htmlElement, element)
 							}
 						}
-						else mededelingenStorage = returnedArray
+						else {
+							mededelingenStorage = returnedArray
+							mededelingenStorage.forEach(function(element) {
+								updateUI(htmlElement, element)
+							})
+						}
 					})
 					localStorage.setItem("mededelingen",JSON.stringify(mededelingenStorage))
 				}
