@@ -59,16 +59,17 @@
 			
 		}
 			db.getAllMededelingen().then(function(returnedArray) {
-				console.log("excuting....getAllMedelingen callback")
 				if (returnedArray) {
-					returnedArray.forEach (function (element) {
 						if(mededelingenStorage) {
-							if (mededelingenStorage.findIndex(function (mededeling) {
-								return mededeling === element
-							}) == -1) {
-								mededelingenStorage.push(element)
-								updateUI(htmlElement, element)
-							}
+							returnedArray.forEach (function (element) {
+								if (mededelingenStorage.findIndex(function (mededeling) {
+									var b = JSON.stringify(mededeling) === JSON.stringify(element)
+									return b
+								}) === -1) {
+									mededelingenStorage.push(element)
+									updateUI(htmlElement, element)
+								}
+							})
 						}
 						else {
 							mededelingenStorage = returnedArray
@@ -76,7 +77,6 @@
 								updateUI(htmlElement, element)
 							})
 						}
-					})
 					localStorage.setItem("mededelingen",JSON.stringify(mededelingenStorage))
 				}
 			})
