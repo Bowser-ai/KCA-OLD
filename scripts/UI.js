@@ -32,9 +32,9 @@
 			
 		}
 
-	function updateUI(htmlElement,element) {
+	function updateUI(htmlElement,element, index) {
 		"use strict"
-			var listElement = $("<li></li>")
+			var listElement = $("<li></li>",{id : "index"})
 			listElement.html("<span>" + "Filiaalnummer: " + element.filiaalnummer + "</span><br><br>" +
 				"<a class='maps-link' href='https://www.google.com/maps?q=" + element.address
 				+ ",netherlands'><span>" + "Adres: " + element.address + "</span></a><br><br>" +
@@ -53,28 +53,36 @@
 		if (localStorage.getItem("mededelingen")) {
 				var mededelingenStorage = JSON.parse(localStorage.getItem("mededelingen"))
 			if(!mededelingenStorage) mededelingenStorage = []
-					mededelingenStorage.forEach(function(element) {
-					updateUI(htmlElement, element)
+					mededelingenStorage.forEach(function(element, index) {
+					updateUI(htmlElement, element, index)
 				})
 			
 		}
 			db.getAllMededelingen().then(function(returnedArray) {
 				if (returnedArray) {
 						if(mededelingenStorage) {
-							returnedArray.forEach (function (element) {
+							returnedArray.forEach (function (element, index) {
 								if (mededelingenStorage.findIndex(function (mededeling) {
 									var b = JSON.stringify(mededeling) === JSON.stringify(element)
 									return b
 								}) === -1) {
 									mededelingenStorage.push(element)
-									updateUI(htmlElement, element)
+									updateUI(htmlElement, element,index)
+								}
+							})
+							mededelingenStorage.forEach(function (mededeling , index) {
+								if(returnedArray.findIndex (function (element) {
+									return JSON.stringify(mededeling) === JSON.stringify(element)
+								}) === -1 ) {
+									delete mededelingenStorage[index]
+									htmlElement.find("#" + index).remove()
 								}
 							})
 						}
 						else {
 							mededelingenStorage = returnedArray
-							mededelingenStorage.forEach(function(element) {
-								updateUI(htmlElement, element)
+							mededelingenStorage.forEach(function(element,index) {
+								updateUI(htmlElement, element,index)
 							})
 						}
 					localStorage.setItem("mededelingen",JSON.stringify(mededelingenStorage))
