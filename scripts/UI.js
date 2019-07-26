@@ -34,7 +34,7 @@
 
 	function updateUI(htmlElement,element, index) {
 		"use strict"
-			var listElement = $("<li></li>",{id : "index"})
+			var listElement = $("<li></li>",{id :index})
 			listElement.html("<span>" + "Filiaalnummer: " + element.filiaalnummer + "</span><br><br>" +
 				"<a class='maps-link' href='https://www.google.com/maps?q=" + element.address
 				+ ",netherlands'><span>" + "Adres: " + element.address + "</span></a><br><br>" +
@@ -54,7 +54,7 @@
 				var mededelingenStorage = JSON.parse(localStorage.getItem("mededelingen"))
 			if(!mededelingenStorage) mededelingenStorage = []
 					mededelingenStorage.forEach(function(element, index) {
-					updateUI(htmlElement, element, index)
+					updateUI(htmlElement, element, element.filiaalnummer)
 				})
 			
 		}
@@ -67,22 +67,22 @@
 									return b
 								}) === -1) {
 									mededelingenStorage.push(element)
-									updateUI(htmlElement, element,index)
+									updateUI(htmlElement, element,element.filiaalnummer)
 								}
 							})
 							mededelingenStorage.forEach(function (mededeling , index) {
 								if(returnedArray.findIndex (function (element) {
 									return JSON.stringify(mededeling) === JSON.stringify(element)
 								}) === -1 ) {
-									delete mededelingenStorage[index]
-									htmlElement.find("#" + index).remove()
+									mededelingenStorage.splice(index)
+									$("#" + mededeling.filiaalnummer).remove()
 								}
 							})
 						}
 						else {
 							mededelingenStorage = returnedArray
 							mededelingenStorage.forEach(function(element,index) {
-								updateUI(htmlElement, element,index)
+								updateUI(htmlElement, element,element.filiaalnummer)
 							})
 						}
 					localStorage.setItem("mededelingen",JSON.stringify(mededelingenStorage))
