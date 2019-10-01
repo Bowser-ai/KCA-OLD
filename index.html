@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title> KCA </title>
-    </head>
-    <body>
-		<div class="main-ui">
-			<header class="doc-title"><h1> KCA@2019</h1></header>
-			<form method="post">
-				<div class="input-element">
-					Voer het filiaalnummer in: <br><input type="number" autofocus required id="fn" name="filiaalnummer" style="margin : 10px">
-					<div class="button-row">
-						<input class="zoek-button" type="button" onclick="UI.updateElementFromDb(dataBase,$('.main-ui'),$('#fn').val())" value="Zoek">
-						<input class="opschoon-button" type="button" onclick="$('.queryText').remove()" value="Opschonen">
-					</div>
-						<a class="mededeling-ref" href="mededelingen.html">Medelingen ==></a>
-				</div>
-			</form>
-			<div class="dialog-container">
-				<dialog id="dialog">
-				<div>Wijzig mededeling</div>
-				<textarea rows="6" cols="80" id="dialog-input"></textarea>
-				</dialog>
-			</div>
-		</div>
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>	
-	
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-		https://firebase.google.com/docs/web/setup#config-web-app -->
-	
-		<script src="scripts/initialize_fb.js"></script>
-		<script src="scripts/query_db.js"></script>
-		<script src="scripts/UI.js"></script>
-		<script src="scripts/main.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KCA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <p class="nav-title">&lt;&gt;KCA</p>
+        <a class="nav-link nav-link-list" href="#">Lijst</a>
+        <a class="nav-link nav-link-med" href="mededelingen.html">Mededelingen</a>
+    </nav>
+    <main class="main">
+        <div class="main-content">
+            <h2 class="input-text">Voer het filiaalnummer in:</h2>
+            <input class="input-box" type="number" required autofocus placeholder="filiaalnummer">
+        </div>
+        <div class="button">
+            <button class="btn btn-search">Zoek</button>
+            <button class="btn btn-clear">Opschonen</button>
+        </div>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
 </html>

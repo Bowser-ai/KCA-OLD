@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 4.5rem;
+  top: 0;
+  display: flex;
+  background-color: darkblue;
+  box-sizing: border-box;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  z-index: 1;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  margin: 0 15px 0 15px;
+  transition: all 0.3s ease-in;
+}
+.navbar a:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.mededelingen-list {
+  margin: 7.5rem 0.25rem 1rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0;
+  color: #fff;
+}
+.mededelingen-list li {
+  margin: 1rem 0.2rem 1rem 0.2rem;
+  padding: 1rem 1rem 1rem 1rem;
+  list-style-type: none;
+  border: darkblue 1px solid;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 11pt;
+  }
+
+  .navbar {
+    font-size: 1.2rem;
+  }
+  .navbar a {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=mededelingen_style.css.map */
