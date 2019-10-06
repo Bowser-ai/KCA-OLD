@@ -11,6 +11,7 @@
   justify-content: space-between;
   text-decoration: none;
   font-size: 1.7rem;
+  padding: 0 1rem 0 1rem;
   font-family: sans-serif;
   z-index: 1;
 }
@@ -18,7 +19,8 @@
   text-decoration: none;
   font-size: 1.7rem;
   font-family: sans-serif;
-  margin: 0 15px 0 15px;
+  margin-left: 1rem;
+  text-align: center;
   transition: all 0.3s ease-in;
 }
 .navbar a:hover {
@@ -26,14 +28,20 @@
   transform: scale(1.2);
 }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
   background-color: #000;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.mededelingen-list-container {
+  transition: opacity 600ms ease-in;
 }
 
 .mededelingen-list {
-  margin: 7.5rem 0.25rem 1rem 0.25rem;
+  margin: 5.5rem 0.25rem 1rem 0.25rem;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -41,10 +49,101 @@ body {
   color: #fff;
 }
 .mededelingen-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-items: left;
+  justify-content: left;
   margin: 1rem 0.2rem 1rem 0.2rem;
   padding: 1rem 1rem 1rem 1rem;
   list-style-type: none;
   border: darkblue 1px solid;
+}
+.mededelingen-list li .link {
+  background-color: black;
+  text-decoration: none;
+  color: blue;
+  transition: color 400ms ease-in;
+}
+.mededelingen-list li .link:hover {
+  color: red;
+}
+.mededelingen-list li .btn.btn-mededeling {
+  margin-top: 0.9rem;
+  background-color: darkblue;
+  color: #fff;
+  max-width: 90px;
+  flex: 0;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: #fff 2px solid;
+  text-decoration: none;
+}
+
+.modalDialog {
+  background-color: #005f8b;
+  border: 1px solid white;
+  color: #fff;
+  box-shadow: grey 2px 2px;
+  width: 80%;
+  height: 40%;
+  min-height: 275px;
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  padding: 5px;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  pointer-events: auto;
+}
+.modalDialog .modal-body {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.modalDialog .modal-title {
+  text-align: center;
+}
+.modalDialog .edit-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.modalDialog .mededeling-edit {
+  width: 100%;
+  height: 125px;
+}
+.modalDialog .button {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#addModal {
+  height: 50%;
+}
+#addModal span {
+  width: 100%;
+}
+
+#add-mededeling-filiaalnummer {
+  width: 25%;
+  height: 15px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+#add-mededeling-med {
+  width: 70%;
+  margin-left: 36px;
 }
 
 @media screen and (max-width: 650px) {
@@ -57,6 +156,33 @@ body {
   }
   .navbar a {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  #addModal {
+    height: 60%;
+    width: 80%;
+  }
+  #addModal .modal-body {
+    width: 100%;
+  }
+  #addModal span {
+    width: 90%;
+  }
+
+  .modalDialog {
+    width: 90%;
+    height: 300px;
+    font-size: 10pt;
+  }
+  .modalDialog .mededeling-edit {
+    width: 100%;
+    height: 150px;
+  }
+  .modalDialog #add-mededeling-med {
+    width: 100%;
+    height: 100px;
+    margin-left: 10px;
   }
 }
 

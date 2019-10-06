@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <p class="nav-title">&lt;&gt;KCA</p>
-        <a class="nav-link nav-link-list" href="#">Lijst</a>
+        <a class="nav-link nav-link-list" href="list.html">Lijst</a>
         <a class="nav-link nav-link-med" href="mededelingen.html">Mededelingen</a>
     </nav>
     <main class="main">
@@ -24,7 +23,10 @@
             <button class="btn btn-search">Zoek</button>
             <button class="btn btn-clear">Opschonen</button>
         </div>
+        <ul class="filialen-list">
+        </ul>
     </main>
+    <footer class="footer">Filialen in de database: </footer>
     <script src="scripts/main.js"></script>
 </body>
 </html>
