@@ -34,6 +34,7 @@ html {
   margin-left: 1rem;
   text-align: center;
   transition: all 0.3s ease-in;
+  color: green;
 }
 .navbar a:hover {
   color: red;
@@ -91,19 +92,33 @@ html {
   padding: 0;
 }
 .filialen-list li {
-  border: blue 2px solid;
+  border: #ff4f00 3px outset;
+  border-radius: 10px;
   margin: 1rem 1rem 1rem 1rem;
   width: 90%;
   list-style: none;
-  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  padding: 5px 10px;
 }
 .filialen-list li a {
-  text-decoration: none;
-  color: blue;
+  text-decoration: underline;
+  color: #00e0a3;
   transition: color 500ms ease-in;
 }
 .filialen-list li a:hover {
   color: red;
+}
+
+.filialen-list li a:visited {
+  color: yellow;
+}
+
+.filiaal-attr {
+  font-size: 18pt;
+  text-decoration: underline;
+}
+
+.filiaal-val{
+  font-size: 16pt;
 }
 
 .footer {

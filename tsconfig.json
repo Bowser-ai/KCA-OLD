@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "umd",
+    "strict": true,
+    "rootDir": "scripts/src/",
+    "outDir": "scripts/dist/",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["es5", "dom", "es6"]
+  },
+  "exclude": [
+        "node_modules", "**/*.spec.ts"
+    ]
+}

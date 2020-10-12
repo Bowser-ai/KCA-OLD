@@ -20,6 +20,7 @@
   font-family: sans-serif;
   margin: 0 15px 0 15px;
   transition: all 0.3s ease-in;
+  color: green;
 }
 .navbar a:hover {
   color: red;
@@ -43,7 +44,9 @@ body, html {
   padding: 0;
 }
 .filialen-list li {
-  border: blue 2px solid;
+  border: red 2px solid;
+  border-radius: 10px;
+  border-style: outset;
   margin: 1rem 1rem 1rem 1rem;
   width: 90%;
   list-style: none;
@@ -51,11 +54,15 @@ body, html {
 }
 .filialen-list li a {
   text-decoration: none;
-  color: blue;
+  color: green;
   transition: color 500ms ease-in;
 }
 .filialen-list li a:hover {
   color: red;
+}
+.filiaal-attr{
+  font-size: 14pt;
+  text-decoration: underline;
 }
 
 .main {
