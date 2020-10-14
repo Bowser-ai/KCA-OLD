@@ -34,7 +34,7 @@ html {
   margin-left: 1rem;
   text-align: center;
   transition: all 0.3s ease-in;
-  color: green;
+  color: #72ff72;
 }
 .navbar a:hover {
   color: red;

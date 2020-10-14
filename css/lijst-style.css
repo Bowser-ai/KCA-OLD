@@ -20,7 +20,7 @@
   font-family: sans-serif;
   margin: 0 15px 0 15px;
   transition: all 0.3s ease-in;
-  color: green;
+  color: #72ff72;
 }
 .navbar a:hover {
   color: red;
@@ -54,7 +54,7 @@ body, html {
 }
 .filialen-list li a {
   text-decoration: none;
-  color: green;
+  color: #72ff72;
   transition: color 500ms ease-in;
 }
 .filialen-list li a:hover {
